@@ -1,0 +1,27 @@
+body {
+	margin: 0 auto;
+	width: 800px;
+}
+
+footer {
+	margin-top: 10px;
+	border-top: 1px solid black;
+	padding: 5px 0;
+}
+
+#tutorial {
+	padding: 0 20px;
+	margin: 50px 0;
+}
+
+#submit-url {
+	border: 1px solid black;
+	padding: 20px;
+}
+
+#resultbox {
+	border: 1px solid black;
+	padding: 20px;
+	margin-top: 10px;
+	visibility: hidden;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>KF2 Convert</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="kf2-converter.js"></script>
+	</head>
+	<body>
+		<h1>Killing Floor 2 Workshop Collection URL Converter</h1>
+		<main>
+			<div id="tutorial">
+				<h2>How to Use</h2>
+				<ol>
+					<li>Type the URL from your maps (or items) collection of your Steam Workshop (example: 'put a collection example').</li>
+					<li>Check if in your PCServer-KFEngine.ini (located on \KFGame\Config\) has a section named "[OnlineSubsystemSteamworks.KFWorkshopSteamworks]", if not, unmark the option "Exists [OnlineSubsystemSteamworks.KFWorkshopSteamworks] Section".</li>
+					<li>Click Convert.</li>
+					<li>Add the result to the end of the server PCServer-KFEngine.ini (located on \KFGame\Config\).</li>
+				</ol>
+				<p>For more help, check this <a href="https://wiki.tripwireinteractive.com/index.php?title=Dedicated_Server_(Killing_Floor_2)#Setting_Up_Steam_Workshop_For_Servers" target="_new">Article Section</a> on Tripwire Wiki.
+				</p>
+			</div>
+		</main>
+		
+		<form id="submit-url">
+			<label for="workshop-collection-url">Workshop Collection URL:</label>
+			<!--<input type="url" name="" id="workshop-collection-url" size="55" value="http://steamcommunity.com/sharedfiles/filedetails/?id=808216287"> <br>-->
+			<input type="url" name="" id="workshop-collection-url" size="75" placeholder="Example http://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXX"> <br>
+			<input type="checkbox" name="" id="exists-section-KFWorkshopSteamwoks" checked>
+			<label for="exists-section-KFWorkshopSteamwoks">Exists [OnlineSubsystemSteamworks.KFWorkshopSteamworks] Section</label> <br><br>
+			<button type="button" onclick="doProcess()">Convert</button>
+		</form>
+		<div id="resultbox">
+			<p id="result"></p>
+		</div>
+
+		<footer>
+			Created and Designed by <a href="https://github.com/DouglasAntunes" target="_new">BlackBurn</a> and <a href="https://github.com/BRGheet" target="_new">Gheet</a> | 
+			<a href="https://github.com/DouglasAntunes/KF2-Workshop-Collection-URL-Converter" target="_new">Source</a>
+		</footer>
+
+	</body>
+</html>
