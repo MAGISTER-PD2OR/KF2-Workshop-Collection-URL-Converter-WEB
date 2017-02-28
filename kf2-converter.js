@@ -25,7 +25,7 @@ function YQLQuery(query, callback) {
             delete YQLQuery[uid];
             document.body.removeChild(scriptEl);
         };
-        scriptEl.src = 'http://query.yahooapis.com/v1/public/yql?q='
+        scriptEl.src = 'https://query.yahooapis.com/v1/public/yql?q='
                      + encodedQuery + '&format=json&callback=YQLQuery.' + uid;
      	if(debugMode) {
 			console.log("Query URL: " + scriptEl.src);	
