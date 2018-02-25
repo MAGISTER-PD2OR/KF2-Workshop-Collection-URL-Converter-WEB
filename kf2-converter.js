@@ -26,7 +26,7 @@ function YQLQuery(query, callback) {
             document.body.removeChild(scriptEl);
         };
         scriptEl.src = 'https://query.yahooapis.com/v1/public/yql?q='
-                     + encodedQuery + '&format=json&callback=YQLQuery.' + uid;
+                     + encodedQuery + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=YQLQuery.' + uid;
      	if(debugMode) {
 			console.log("Query URL: " + scriptEl.src);	
 			console.log(scriptEl);
@@ -97,7 +97,7 @@ function doProcess() {
 		        
 		};
 
-	var workshopCollItemsQueryInit = "select * from html where url=",
+	var workshopCollItemsQueryInit = "select * from htmlstring where url=",
 		workshopCollItemsQueryLast = "and xpath=\"//div[@class='workshopItemTitle']\"",
 		//
 		workshopCollectionItemsQueryData = new YQLQuery(workshopCollItemsQueryInit + "\"" + workshopCollURL + "\" " + workshopCollItemsQueryLast, callback);
